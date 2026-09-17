@@ -1,0 +1,2240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="SchemeBuddy 2.0 - From eligibility to action"
+    >
+
+    <title>
+        SchemeBuddy 2.0 | From Eligibility to Action
+    </title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside class="sidebar" id="sidebar">
+
+    <div class="sidebar-brand">
+
+        <div class="brand-logo">
+            SB
+        </div>
+
+        <div>
+            <strong>
+                SchemeBuddy
+            </strong>
+
+            <small>
+                2.0
+            </small>
+        </div>
+
+    </div>
+
+
+    <nav class="navigation">
+
+        <a
+            href="#dashboard"
+            class="nav-item active"
+        >
+            <span>⌂</span>
+            Dashboard
+        </a>
+
+
+        <a
+            href="#benefitPassport"
+            class="nav-item"
+        >
+            <span>🪪</span>
+            Benefit Passport
+        </a>
+
+
+        <a
+            href="#benefitRadar"
+            class="nav-item"
+        >
+            <span>🧭</span>
+            Benefit Radar
+        </a>
+
+
+        <a
+            href="#familyMap"
+            class="nav-item"
+        >
+            <span>👨‍👩‍👧</span>
+            Family Map
+        </a>
+
+
+        <a
+            href="#documents"
+            class="nav-item"
+        >
+            <span>📄</span>
+            Documents
+        </a>
+
+
+        <a
+            href="#deadlines"
+            class="nav-item"
+        >
+            <span>⏳</span>
+            Deadline Radar
+        </a>
+
+
+        <a
+            href="#portals"
+            class="nav-item"
+        >
+            <span>🔗</span>
+            Official Portals
+        </a>
+
+
+        <a
+            href="#help"
+            class="nav-item"
+        >
+            <span>☎</span>
+            Help & Helpline
+        </a>
+
+    </nav>
+
+
+    <div class="sidebar-footer">
+
+        <div class="secure-badge">
+            🔒 Privacy-first demo
+        </div>
+
+        <small>
+            Always verify final information
+            on official government portals.
+        </small>
+
+    </div>
+
+</aside>
+
+
+
+<!-- =====================================================
+     MAIN CONTENT
+===================================================== -->
+
+<main class="main">
+
+
+<!-- =====================================================
+     TOPBAR
+===================================================== -->
+
+<header class="topbar">
+
+    <button
+        class="menu-button"
+        onclick="toggleSidebar()"
+    >
+        ☰
+    </button>
+
+
+    <div class="topbar-title">
+
+        <span>
+            SchemeBuddy
+        </span>
+
+        <small>
+            From eligibility to action
+        </small>
+
+    </div>
+
+
+    <div class="topbar-actions">
+
+        <select
+            id="languageSelect"
+            aria-label="Select language"
+        >
+
+            <option value="en">
+                English
+            </option>
+
+            <option value="ta">
+                தமிழ்
+            </option>
+
+            <option value="hi">
+                हिन्दी
+            </option>
+
+        </select>
+
+
+        <button
+            class="notification-button"
+            onclick="scrollToSection('deadlines')"
+        >
+            🔔
+        </button>
+
+
+        <button
+            class="profile-avatar"
+            onclick="scrollToSection('benefitPassport')"
+        >
+            <span id="avatarLetter">
+                S
+            </span>
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     DASHBOARD
+===================================================== -->
+
+<section
+    id="dashboard"
+    class="page-section dashboard-section"
+>
+
+
+    <div class="welcome-area">
+
+        <div>
+
+            <p class="eyebrow">
+                YOUR BENEFIT NAVIGATOR
+            </p>
+
+            <h1>
+                <span id="dashboardGreeting">
+                    Welcome back
+                </span>
+                👋
+            </h1>
+
+            <p>
+                Discover possible benefits,
+                prepare for applications and
+                reach the right official portal.
+            </p>
+
+        </div>
+
+
+        <button
+            class="primary-button"
+            onclick="openChat()"
+        >
+            💬 Ask SchemeBuddy AI
+        </button>
+
+    </div>
+
+
+
+    <!-- HERO RADAR -->
+
+    <div class="dashboard-hero">
+
+        <div class="hero-copy">
+
+            <div class="hero-label">
+                🧭 BENEFIT RADAR
+            </div>
+
+            <h2>
+                Don't just find a scheme.
+                <span>
+                    Know your next step.
+                </span>
+            </h2>
+
+            <p>
+                SchemeBuddy converts your situation
+                into a personalised benefit journey,
+                document checklist and action plan.
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <button
+                    class="primary-button"
+                    onclick="scrollToSection('benefitRadar')"
+                >
+                    Explore My Radar
+                </button>
+
+                <button
+                    class="ghost-button"
+                    onclick="scrollToSection('benefitPassport')"
+                >
+                    View My Passport
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- READINESS CIRCLE -->
+
+        <div class="readiness-widget">
+
+            <div
+                class="readiness-circle"
+                id="mainReadinessCircle"
+            >
+
+                <div>
+
+                    <strong id="mainReadiness">
+                        72
+                    </strong>
+
+                    <span>
+                        /100
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <p>
+                Application Readiness
+            </p>
+
+            <small>
+                Demo score based on your
+                profile and preparation.
+            </small>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- QUICK STATS -->
+
+    <div class="stats-grid">
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon purple">
+                🧭
+            </div>
+
+            <div>
+
+                <strong id="opportunityCount">
+                    4
+                </strong>
+
+                <span>
+                    Opportunities
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon orange">
+                📄
+            </div>
+
+            <div>
+
+                <strong id="missingCount">
+                    2
+                </strong>
+
+                <span>
+                    Documents to prepare
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon blue">
+                ⏳
+            </div>
+
+            <div>
+
+                <strong>
+                    3
+                </strong>
+
+                <span>
+                    Upcoming actions
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon green">
+                ✓
+            </div>
+
+            <div>
+
+                <strong>
+                    1
+                </strong>
+
+                <span>
+                    Profile ready
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     BENEFIT PASSPORT
+===================================================== -->
+
+<section
+    id="benefitPassport"
+    class="page-section"
+>
+
+    <div class="section-heading">
+
+        <div>
+
+            <p class="eyebrow">
+                01 • YOUR IDENTITY
+            </p>
+
+            <h2>
+                Benefit Passport
+            </h2>
+
+            <p>
+                One profile for your benefit journey.
+            </p>
+
+        </div>
+
+
+        <button
+            class="secondary-button"
+            onclick="editProfile()"
+        >
+            ✎ Edit Profile
+        </button>
+
+    </div>
+
+
+
+    <div class="passport-grid">
+
+
+        <div class="passport-card profile-card">
+
+            <div class="profile-header">
+
+                <div
+                    class="large-avatar"
+                    id="passportAvatar"
+                >
+                    S
+                </div>
+
+                <div>
+
+                    <h3 id="passportName">
+                        Student
+                    </h3>
+
+                    <span id="passportOccupation">
+                        Student
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="profile-details">
+
+                <div>
+                    <span>
+                        Age
+                    </span>
+
+                    <strong id="passportAge">
+                        20
+                    </strong>
+                </div>
+
+
+                <div>
+                    <span>
+                        State
+                    </span>
+
+                    <strong id="passportState">
+                        Tamil Nadu
+                    </strong>
+                </div>
+
+
+                <div>
+                    <span>
+                        Life Event
+                    </span>
+
+                    <strong id="passportLifeEvent">
+                        Started college
+                    </strong>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="passport-card passport-score-card">
+
+            <div class="passport-score-top">
+
+                <span>
+                    PASSPORT STATUS
+                </span>
+
+                <strong>
+                    Active
+                </strong>
+
+            </div>
+
+
+            <div class="passport-progress">
+
+                <div class="progress-header">
+
+                    <span>
+                        Profile completeness
+                    </span>
+
+                    <strong id="profilePercentage">
+                        80%
+                    </strong>
+
+                </div>
+
+
+                <div class="progress-bar">
+
+                    <span
+                        id="profileProgress"
+                        style="width:80%"
+                    ></span>
+
+                </div>
+
+            </div>
+
+
+            <div class="passport-note">
+
+                🔐 Your passport is a
+                private demo profile.
+                SchemeBuddy does not make
+                official eligibility decisions.
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     BENEFIT RADAR
+===================================================== -->
+
+<section
+    id="benefitRadar"
+    class="page-section"
+>
+
+    <div class="section-heading">
+
+        <div>
+
+            <p class="eyebrow">
+                02 • PERSONALIZED DISCOVERY
+            </p>
+
+            <h2>
+                Your Benefit Radar
+            </h2>
+
+            <p>
+                Areas worth investigating based on
+                your current profile.
+            </p>
+
+        </div>
+
+        <span class="demo-tag">
+            DEMO DATA
+        </span>
+
+    </div>
+
+
+
+    <div class="radar-layout">
+
+
+        <div class="radar-main">
+
+            <div class="radar-header">
+
+                <div>
+
+                    <span class="status-dot"></span>
+
+                    Radar Active
+
+                </div>
+
+                <span>
+                    Updated just now
+                </span>
+
+            </div>
+
+
+            <div class="radar-visual">
+
+                <div class="radar-ring ring-one"></div>
+
+                <div class="radar-ring ring-two"></div>
+
+                <div class="radar-ring ring-three"></div>
+
+                <div class="radar-center">
+                    YOU
+                </div>
+
+
+                <div class="radar-node node-one">
+                    🎓
+                    <small>
+                        Education
+                    </small>
+                </div>
+
+
+                <div class="radar-node node-two">
+                    💼
+                    <small>
+                        Employment
+                    </small>
+                </div>
+
+
+                <div class="radar-node node-three">
+                    🚀
+                    <small>
+                        Business
+                    </small>
+                </div>
+
+
+                <div class="radar-node node-four">
+                    🏠
+                    <small>
+                        Welfare
+                    </small>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="radar-list">
+
+            <div class="opportunity-card high">
+
+                <div class="opportunity-icon">
+                    🎓
+                </div>
+
+                <div>
+
+                    <div class="opportunity-title">
+
+                        <strong>
+                            Education Support
+                        </strong>
+
+                        <span>
+                            HIGH
+                        </span>
+
+                    </div>
+
+                    <p>
+                        Explore scholarships and
+                        education-related support.
+                    </p>
+
+                    <button
+                        onclick="showOpportunity('education')"
+                    >
+                        Explore →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="opportunity-card medium">
+
+                <div class="opportunity-icon">
+                    💼
+                </div>
+
+                <div>
+
+                    <div class="opportunity-title">
+
+                        <strong>
+                            Skills & Employment
+                        </strong>
+
+                        <span>
+                            MEDIUM
+                        </span>
+
+                    </div>
+
+                    <p>
+                        Explore skill-development
+                        and employment support.
+                    </p>
+
+                    <button
+                        onclick="showOpportunity('employment')"
+                    >
+                        Explore →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="opportunity-card medium">
+
+                <div class="opportunity-icon">
+                    🚀
+                </div>
+
+                <div>
+
+                    <div class="opportunity-title">
+
+                        <strong>
+                            Entrepreneurship
+                        </strong>
+
+                        <span>
+                            MEDIUM
+                        </span>
+
+                    </div>
+
+                    <p>
+                        Explore support for starting
+                        or growing a business.
+                    </p>
+
+                    <button
+                        onclick="showOpportunity('business')"
+                    >
+                        Explore →
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     LIFE EVENT TRIGGER
+===================================================== -->
+
+<section
+    id="lifeEvents"
+    class="page-section"
+>
+
+    <div class="life-event-box">
+
+        <div>
+
+            <p class="eyebrow">
+                LIFE EVENT TRIGGER
+            </p>
+
+            <h2>
+                Something changed?
+            </h2>
+
+            <p>
+                Your benefit profile should change
+                when your life changes.
+            </p>
+
+        </div>
+
+
+        <div class="life-event-buttons">
+
+            <button
+                onclick="triggerLifeEvent('Started college')"
+            >
+                🎓
+                <span>
+                    Started college
+                </span>
+            </button>
+
+
+            <button
+                onclick="triggerLifeEvent('Looking for work')"
+            >
+                💼
+                <span>
+                    Looking for work
+                </span>
+            </button>
+
+
+            <button
+                onclick="triggerLifeEvent('Starting a business')"
+            >
+                🚀
+                <span>
+                    Starting business
+                </span>
+            </button>
+
+
+            <button
+                onclick="triggerLifeEvent('Income changed')"
+            >
+                💰
+                <span>
+                    Income changed
+                </span>
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FAMILY BENEFIT MAP
+===================================================== -->
+
+<section
+    id="familyMap"
+    class="page-section"
+>
+
+    <div class="section-heading">
+
+        <div>
+
+            <p class="eyebrow">
+                03 • HOUSEHOLD VIEW
+            </p>
+
+            <h2>
+                Family Benefit Map
+            </h2>
+
+            <p>
+                View possible benefit areas across
+                different members of a household.
+            </p>
+
+        </div>
+
+
+        <button
+            class="secondary-button"
+            onclick="addFamilyMember()"
+        >
+            + Add Member
+        </button>
+
+    </div>
+
+
+    <div
+        id="familyMembers"
+        class="family-grid"
+    >
+
+        <div class="family-card">
+
+            <div class="family-avatar">
+                👩
+            </div>
+
+            <div>
+
+                <strong>
+                    Mother
+                </strong>
+
+                <span>
+                    Employment / Welfare
+                </span>
+
+                <small>
+                    3 areas to explore
+                </small>
+
+            </div>
+
+            <button
+                onclick="viewFamilyMember('Mother')"
+            >
+                View →
+            </button>
+
+        </div>
+
+
+        <div class="family-card">
+
+            <div class="family-avatar">
+                👨
+            </div>
+
+            <div>
+
+                <strong>
+                    Father
+                </strong>
+
+                <span>
+                    Employment / Social support
+                </span>
+
+                <small>
+                    2 areas to explore
+                </small>
+
+            </div>
+
+            <button
+                onclick="viewFamilyMember('Father')"
+            >
+                View →
+            </button>
+
+        </div>
+
+
+        <div class="family-card">
+
+            <div class="family-avatar">
+                🎓
+            </div>
+
+            <div>
+
+                <strong>
+                    Me
+                </strong>
+
+                <span>
+                    Education / Skills
+                </span>
+
+                <small>
+                    4 areas to explore
+                </small>
+
+            </div>
+
+            <button
+                onclick="viewFamilyMember('You')"
+            >
+                View →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SCHEME COMBINATION ENGINE
+===================================================== -->
+
+<section
+    id="schemeEngine"
+    class="page-section"
+>
+
+    <div class="section-heading">
+
+        <div>
+
+            <p class="eyebrow">
+                04 • BENEFIT PATHWAYS
+            </p>
+
+            <h2>
+                Scheme Combination Engine
+            </h2>
+
+            <p>
+                Explore related benefit pathways instead
+                of looking at isolated schemes.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="journey">
+
+        <div class="journey-step active">
+
+            <div class="journey-number">
+                01
+            </div>
+
+            <div>
+
+                <strong>
+                    Your Situation
+                </strong>
+
+                <span>
+                    College student
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="journey-line"></div>
+
+
+        <div class="journey-step">
+
+            <div class="journey-number">
+                02
+            </div>
+
+            <div>
+
+                <strong>
+                    Education Support
+                </strong>
+
+                <span>
+                    Explore possible scholarships
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="journey-line"></div>
+
+
+        <div class="journey-step">
+
+            <div class="journey-number">
+                03
+            </div>
+
+            <div>
+
+                <strong>
+                    Skill Development
+                </strong>
+
+                <span>
+                    Explore training opportunities
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="journey-line"></div>
+
+
+        <div class="journey-step">
+
+            <div class="journey-number">
+                04
+            </div>
+
+            <div>
+
+                <strong>
+                    Official Route
+                </strong>
+
+                <span>
+                    Verify and apply officially
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="engine-warning">
+
+        ⚠️
+        Related schemes are shown as a discovery
+        pathway. SchemeBuddy does not assume that
+        multiple benefits can legally be combined.
+        Always verify compatibility with the official
+        scheme authority.
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     DOCUMENT READINESS
+===================================================== -->
+
+<section
+    id="documents"
+    class="page-section"
+>
+
+    <div class="section-heading">
+
+        <div>
+
+            <p class="eyebrow">
+                05 • APPLICATION PREPARATION
+            </p>
+
+            <h2>
+                What Am I Missing?
+            </h2>
+
+            <p>
+                Build your application readiness checklist.
+            </p>
+
+        </div>
+
+        <div class="readiness-small">
+
+            <strong id="documentScore">
+                50%
+            </strong>
+
+            ready
+
+        </div>
+
+    </div>
+
+
+    <div class="document-layout">
+
+
+        <div class="document-checklist">
+
+            <label class="document-item">
+
+                <input
+                    type="checkbox"
+                    data-document
+                >
+
+                <span class="document-check">
+                    ✓
+                </span>
+
+                <div>
+
+                    <strong>
+                        Identity Proof
+                    </strong>
+
+                    <small>
+                        Aadhaar / other accepted ID
+                    </small>
+
+                </div>
+
+            </label>
+
+
+            <label class="document-item">
+
+                <input
+                    type="checkbox"
+                    data-document
+                >
+
+                <span class="document-check">
+                    ✓
+                </span>
+
+                <div>
+
+                    <strong>
+                        Bank Details
+                    </strong>
+
+                    <small>
+                        Verify accepted account details
+                    </small>
+
+                </div>
+
+            </label>
+
+
+            <label class="document-item">
+
+                <input
+                    type="checkbox"
+                    data-document
+                >
+
+                <span class="document-check">
+                    ✓
+                </span>
+
+                <div>
+
+                    <strong>
+                        Income Certificate
+                    </strong>
+
+                    <small>
+                        If required by the scheme
+                    </small>
+
+                </div>
+
+            </label>
+
+
+            <label class="document-item">
+
+                <input
+                    type="checkbox"
+                    data-document
+                >
+
+                <span class="document-check">
+                    ✓
+                </span>
+
+                <div>
+
+                    <strong>
+                        Education Proof
+                    </strong>
+
+                    <small>
+                        If required by the scheme
+                    </small>
+
+                </div>
+
+            </label>
+
+
+            <label class="document-item">
+
+                <input
+                    type="checkbox"
+                    data-document
+                >
+
+                <span class="document-check">
+                    ✓
+                </span>
+
+                <div>
+
+                    <strong>
+                        Photograph
+                    </strong>
+
+                    <small>
+                        Check current specifications
+                    </small>
+
+                </div>
+
+            </label>
+
+
+            <label class="document-item">
+
+                <input
+                    type="checkbox"
+                    data-document
+                >
+
+                <span class="document-check">
+                    ✓
+                </span>
+
+                <div>
+
+                    <strong>
+                        Address Proof
+                    </strong>
+
+                    <small>
+                        If required
+                    </small>
+
+                </div>
+
+            </label>
+
+        </div>
+
+
+        <div class="document-score-panel">
+
+            <div class="score-circle">
+
+                <strong id="documentCircle">
+                    50
+                </strong>
+
+                <span>
+                    %
+                </span>
+
+            </div>
+
+            <h3>
+                Application Readiness
+            </h3>
+
+            <p id="documentMessage">
+                Some preparation may still be needed.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     DEADLINE RADAR
+===================================================== -->
+
+<section
+    id="deadlines"
+    class="page-section"
+>
+
+    <div class="section-heading">
+
+        <div>
+
+            <p class="eyebrow">
+                06 • TIME SENSITIVE
+            </p>
+
+            <h2>
+                Deadline Radar
+            </h2>
+
+            <p>
+                Demo reminders for actions that may
+                need attention.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="deadline-grid">
+
+
+        <div class="deadline-card urgent">
+
+            <div class="deadline-date">
+                <strong>
+                    08
+                </strong>
+
+                <span>
+                    DAYS
+                </span>
+            </div>
+
+            <div>
+
+                <span class="deadline-tag red">
+                    ACTION SOON
+                </span>
+
+                <h3>
+                    Scholarship application
+                </h3>
+
+                <p>
+                    Verify the current deadline
+                    on the official scheme page.
+                </p>
+
+                <a
+                    href="https://www.myscheme.gov.in/"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    Verify Official Date ↗
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="deadline-card">
+
+            <div class="deadline-date">
+                <strong>
+                    15
+                </strong>
+
+                <span>
+                    DAYS
+                </span>
+            </div>
+
+            <div>
+
+                <span class="deadline-tag yellow">
+                    PREPARE
+                </span>
+
+                <h3>
+                    Document preparation
+                </h3>
+
+                <p>
+                    Check whether any required
+                    certificate needs updating.
+                </p>
+
+                <a
+                    href="https://www.india.gov.in/"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    Check Official Source ↗
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="deadline-card">
+
+            <div class="deadline-date">
+                <strong>
+                    ∞
+                </strong>
+
+                <span>
+                    CHECK
+                </span>
+            </div>
+
+            <div>
+
+                <span class="deadline-tag green">
+                    MONITOR
+                </span>
+
+                <h3>
+                    New opportunities
+                </h3>
+
+                <p>
+                    Re-check your profile when
+                    your circumstances change.
+                </p>
+
+                <button
+                    onclick="triggerLifeEvent('Income changed')"
+                >
+                    Re-check Radar →
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     WHY NOT ME
+===================================================== -->
+
+<section
+    id="whyNotMe"
+    class="page-section"
+>
+
+    <div class="why-layout">
+
+        <div>
+
+            <p class="eyebrow">
+                07 • ELIGIBILITY EXPLAINER
+            </p>
+
+            <h2>
+                “Why Not Me?”
+            </h2>
+
+            <p>
+                Instead of simply saying “Not eligible,”
+                SchemeBuddy explains which conditions
+                appear to match and which need verification.
+            </p>
+
+            <button
+                class="primary-button"
+                onclick="showWhyNotMe()"
+            >
+                Explain My Result
+            </button>
+
+        </div>
+
+
+        <div
+            class="eligibility-result"
+            id="eligibilityResult"
+        >
+
+            <div class="eligibility-row">
+
+                <span>
+                    Age requirement
+                </span>
+
+                <strong class="match">
+                    ✓ Match
+                </strong>
+
+            </div>
+
+
+            <div class="eligibility-row">
+
+                <span>
+                    Education requirement
+                </span>
+
+                <strong class="match">
+                    ✓ Match
+                </strong>
+
+            </div>
+
+
+            <div class="eligibility-row">
+
+                <span>
+                    Income condition
+                </span>
+
+                <strong class="check">
+                    ! Verify
+                </strong>
+
+            </div>
+
+
+            <div class="eligibility-row">
+
+                <span>
+                    Required certificate
+                </span>
+
+                <strong class="missing">
+                    × Missing
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     OFFICIAL PORTALS
+===================================================== -->
+
+<section
+    id="portals"
+    class="page-section"
+>
+
+    <div class="section-heading">
+
+        <div>
+
+            <p class="eyebrow">
+                08 • OFFICIAL ROUTE
+            </p>
+
+            <h2>
+                Government Portals
+            </h2>
+
+            <p>
+                SchemeBuddy guides users to official
+                government sources for verification
+                and applications.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="portal-grid">
+
+
+        <a
+            href="https://www.myscheme.gov.in/"
+            target="_blank"
+            rel="noopener"
+            class="portal-card"
+        >
+
+            <div class="portal-icon">
+                🇮🇳
+            </div>
+
+            <strong>
+                myScheme
+            </strong>
+
+            <p>
+                Government scheme discovery
+                and eligibility information.
+            </p>
+
+            <span>
+                Open Official Portal ↗
+            </span>
+
+        </a>
+
+
+        <a
+            href="https://web.umang.gov.in/"
+            target="_blank"
+            rel="noopener"
+            class="portal-card"
+        >
+
+            <div class="portal-icon">
+                📱
+            </div>
+
+            <strong>
+                UMANG
+            </strong>
+
+            <p>
+                Access a range of government
+                services through one platform.
+            </p>
+
+            <span>
+                Open Official Portal ↗
+            </span>
+
+        </a>
+
+
+        <a
+            href="https://www.india.gov.in/"
+            target="_blank"
+            rel="noopener"
+            class="portal-card"
+        >
+
+            <div class="portal-icon">
+                🌐
+            </div>
+
+            <strong>
+                India.gov.in
+            </strong>
+
+            <p>
+                National Portal of India and
+                government information.
+            </p>
+
+            <span>
+                Open Official Portal ↗
+            </span>
+
+        </a>
+
+
+        <a
+            href="https://www.digilocker.gov.in/"
+            target="_blank"
+            rel="noopener"
+            class="portal-card"
+        >
+
+            <div class="portal-icon">
+                📁
+            </div>
+
+            <strong>
+                DigiLocker
+            </strong>
+
+            <p>
+                Digital document and certificate
+                services.
+            </p>
+
+            <span>
+                Open Official Portal ↗
+            </span>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     HELP / HELPLINE
+===================================================== -->
+
+<section
+    id="help"
+    class="page-section"
+>
+
+    <div class="help-banner">
+
+        <div>
+
+            <p class="eyebrow">
+                09 • HUMAN SUPPORT
+            </p>
+
+            <h2>
+                Need help?
+            </h2>
+
+            <p>
+                Use SchemeBuddy AI for navigation,
+                then use the relevant official
+                government support channel for
+                authoritative assistance.
+            </p>
+
+        </div>
+
+
+        <div class="help-actions">
+
+            <button
+                class="primary-button"
+                onclick="openChat()"
+            >
+                💬 Chat with SchemeBuddy
+            </button>
+
+
+            <a
+                href="https://www.myscheme.gov.in/"
+                target="_blank"
+                rel="noopener"
+                class="secondary-button"
+            >
+                🔗 Official Scheme Support
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="footer-brand">
+
+        <div class="brand-logo">
+            SB
+        </div>
+
+        <strong>
+            SchemeBuddy 2.0
+        </strong>
+
+    </div>
+
+
+    <p>
+        From eligibility to action.
+    </p>
+
+
+    <div class="footer-warning">
+
+        ⚠️
+        SchemeBuddy is a student prototype,
+        not a government website. It does not
+        make official eligibility decisions,
+        guarantee benefits or submit official
+        applications.
+
+        Always verify eligibility, documents,
+        deadlines and application instructions
+        on the relevant official government portal.
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     AI CHATBOT
+===================================================== -->
+
+<div
+    id="chatModal"
+    class="modal hidden"
+>
+
+    <div class="chat-window">
+
+
+        <div class="chat-header">
+
+            <div>
+
+                <div class="ai-title">
+
+                    <span class="ai-dot"></span>
+
+                    SchemeBuddy AI
+
+                </div>
+
+                <small>
+                    Navigation assistant • Demo
+                </small>
+
+            </div>
+
+
+            <button
+                onclick="closeChat()"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div
+            id="chatMessages"
+            class="chat-messages"
+        >
+
+            <div class="bot-message">
+
+                <strong>
+                    Hi! I'm SchemeBuddy AI 👋
+                </strong>
+
+                <br><br>
+
+                I can help you understand:
+
+                <br><br>
+
+                🧭 Scheme discovery<br>
+                📄 Documents<br>
+                ⏳ Deadlines<br>
+                🔗 Official portals<br>
+                ❓ Eligibility explanations
+
+                <br><br>
+
+                Ask me anything.
+
+            </div>
+
+        </div>
+
+
+        <div class="quick-questions">
+
+            <button
+                onclick="askQuick('How do I find schemes?')"
+            >
+                Find schemes
+            </button>
+
+
+            <button
+                onclick="askQuick('What documents do I need?')"
+            >
+                Documents
+            </button>
+
+
+            <button
+                onclick="askQuick('Where do I apply?')"
+            >
+                Apply
+            </button>
+
+
+            <button
+                onclick="askQuick('Am I eligible?')"
+            >
+                Eligibility
+            </button>
+
+        </div>
+
+
+        <form id="chatForm">
+
+            <input
+                id="chatInput"
+                type="text"
+                placeholder="Ask SchemeBuddy..."
+                autocomplete="off"
+            >
+
+
+            <button type="submit">
+                Send
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     PROFILE MODAL
+===================================================== -->
+
+<div
+    id="profileModal"
+    class="modal hidden"
+>
+
+    <div class="profile-modal">
+
+        <div class="modal-header">
+
+            <h2>
+                Edit Benefit Passport
+            </h2>
+
+            <button
+                onclick="closeProfileModal()"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <label>
+            Name
+
+            <input
+                id="editName"
+                type="text"
+            >
+
+        </label>
+
+
+        <label>
+            Age
+
+            <input
+                id="editAge"
+                type="number"
+            >
+
+        </label>
+
+
+        <label>
+            State
+
+            <select id="editState">
+
+                <option>
+                    Tamil Nadu
+                </option>
+
+                <option>
+                    Kerala
+                </option>
+
+                <option>
+                    Karnataka
+                </option>
+
+                <option>
+                    Andhra Pradesh
+                </option>
+
+                <option>
+                    Telangana
+                </option>
+
+                <option>
+                    Other
+                </option>
+
+            </select>
+
+        </label>
+
+
+        <label>
+            Occupation
+
+            <select id="editOccupation">
+
+                <option>
+                    Student
+                </option>
+
+                <option>
+                    Job seeker
+                </option>
+
+                <option>
+                    Employed
+                </option>
+
+                <option>
+                    Farmer
+                </option>
+
+                <option>
+                    Entrepreneur
+                </option>
+
+                <option>
+                    Other
+                </option>
+
+            </select>
+
+        </label>
+
+
+        <label>
+            Life Event
+
+            <select id="editLifeEvent">
+
+                <option>
+                    None
+                </option>
+
+                <option>
+                    Started college
+                </option>
+
+                <option>
+                    Looking for work
+                </option>
+
+                <option>
+                    Starting a business
+                </option>
+
+                <option>
+                    Income changed
+                </option>
+
+                <option>
+                    Moved to another state
+                </option>
+
+            </select>
+
+        </label>
+
+
+        <button
+            class="primary-button full-button"
+            onclick="saveProfile()"
+        >
+            Save Passport
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
